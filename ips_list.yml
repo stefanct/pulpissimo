@@ -19,7 +19,7 @@
 #
 
 pulp_soc:
-  commit: master
+  commit: hd_accel
   server: https://github.com
   group:  pulp-platform
 
