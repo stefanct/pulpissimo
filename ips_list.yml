@@ -19,7 +19,7 @@
 #
 
 pulp_soc:
-  commit: pulpissimo-next
+  commit: pulpissimo-next-udma
   server: https://github.com
   group:  pulp-platform
 
