@@ -61,6 +61,7 @@ module xilinx_pulpissimo (
    inout  wire pad_pmod1_7,  //Mapped to i2s1_sdi
 
    input  wire pad_reset,
+   input  wire pad_reset2,
 
    input  wire pad_jtag_tck,
    input  wire pad_jtag_tdi,
@@ -75,7 +76,7 @@ module xilinx_pulpissimo (
   wire ref_clk_int;
   wire tck_int;
   wire rst_n;
-  assign rst_n = ~pad_reset;
+  assign rst_n = ~pad_reset && pad_reset2;
 
   // Input clock buffer
   BUFG i_sysclk_bufg (

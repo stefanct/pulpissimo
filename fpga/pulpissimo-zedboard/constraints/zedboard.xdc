@@ -80,7 +80,10 @@ set_clock_groups -asynchronous -group [get_clocks -of_objects [get_pins i_pulpis
 set_property -dict {PACKAGE_PIN Y9 IOSTANDARD LVCMOS33} [get_ports ref_clk_i]
 
 ## Reset
+# btnc
 set_property -dict {PACKAGE_PIN P16 IOSTANDARD LVCMOS18} [get_ports pad_reset]
+# PMOD JB7
+set_property -dict {PACKAGE_PIN V8 IOSTANDARD LVCMOS33} [get_ports pad_reset2]
 
 ## Buttons
 set_property -dict {PACKAGE_PIN R16 IOSTANDARD LVCMOS18} [get_ports btnu_i]
@@ -106,7 +109,8 @@ set_property -dict {PACKAGE_PIN W8 IOSTANDARD LVCMOS33} [get_ports pad_i2c1_sda]
 set_property -dict {PACKAGE_PIN V12 IOSTANDARD LVCMOS33} [get_ports pad_pmod1_4]
 set_property -dict {PACKAGE_PIN W10 IOSTANDARD LVCMOS33} [get_ports pad_pmod1_5]
 set_property -dict {PACKAGE_PIN V9 IOSTANDARD LVCMOS33} [get_ports pad_pmod1_6]
-set_property -dict {PACKAGE_PIN V8 IOSTANDARD LVCMOS33} [get_ports pad_pmod1_7]
+# re-routed to PMOD JC4-P for reset2
+set_property -dict {PACKAGE_PIN T4 IOSTANDARD LVCMOS33} [get_ports pad_pmod1_7]
 
 ## LEDs
 set_property -dict {PACKAGE_PIN T22 IOSTANDARD LVCMOS33} [get_ports led0_o]
